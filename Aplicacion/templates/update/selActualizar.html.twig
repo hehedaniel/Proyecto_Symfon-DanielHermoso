@@ -1,0 +1,30 @@
+{% extends 'home.html.twig' %}
+
+{% block datos %}
+
+  <div>
+
+    <h1>Formulario para seleccionar el producto a actualizar</h1>
+
+    <div>
+
+        <form action="{{ path('producto_actualizar') }}" method="GET" >
+        <label>Selecciona el producto a actualizar</label>
+
+        <select id="id" name="id">
+          <option value="0">---</option>
+          {% for productos in arrayProductos %}
+              <option value="{{productos.id}}">
+                ID: {{productos.id}} --
+                Modelo: {{productos.modelo}}
+              </option>
+          {% endfor %}
+        </select>
+
+        <input type="submit" value="Buscar">
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

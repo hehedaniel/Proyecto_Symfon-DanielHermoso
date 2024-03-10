@@ -1,0 +1,75 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+inicio:
+    path: /
+    controller: App\Controller\Controller::homepage
+
+
+# Names para el anadir
+productos_anadir_form:
+    path: /anadir
+    controller: App\Controller\Controller::formularioAnadirTwig
+
+anadirprod:
+    path: /anadirprod
+    controller: App\Controller\Controller::anadirProducto
+
+
+# Names para el leer
+productos_buscar:
+    path: /buscar
+    controller: App\Controller\Controller::productosBuscarTwig
+
+producto_mostrar:
+    path: /buscarprod
+    controller: App\Controller\Controller::productoBuscadoMostrar
+
+productos_mostrar:
+    path: /buscarprods
+    controller: App\Controller\Controller::mostrarProductos
+
+
+# Names para actualizar un producto
+sel_actualizar_producto:
+    path: /actualizar
+    controller: App\Controller\Controller::seleccionarProductoModificarTwig
+
+producto_actualizar:
+    path: /producto
+    controller: App\Controller\Controller::formProductoModificar
+
+actualizar_producto:
+    path: /productoact
+    controller: App\Controller\Controller::modificarProducto
+
+
+# Names para eliminar un producto
+form_eliminar_producto:
+    path: /eliminar
+    controller: App\Controller\Controller::formEliminarTwig
+
+respuesta_eliminar:
+    path: /eliminarprod
+    controller: App\Controller\Controller::eliminarProd
+
+
+#Names para inicio de sesion y registro
+registro_usuario:
+    path: /reg
+    controller: App\Controller\Controller::registroUsuario
+
+inicio_sesion_usuario:
+    path: /login
+    controller: App\Controller\Controller::inicioSesionUsuario
+
+inicio_registro_form:
+    path: /logform
+    controller: App\Controller\Controller::mostrarFormInicioYRegistroTwig
+
+cerrar_sesion:
+    path: /sesioncerrada
+    controller: App\Controller\Controller::borrarCookie

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Menú CRUD</h1>
+
+    <a href="{{ path('productos_buscar') }}"><button>Buscar Productos</button></a>
+
+    {% set esAdmin = app.request.cookies.has('admin') %}
+
+    {% if esAdmin == "true" %}
+    {# {% if is_granted('ROLE_ADMIN') %} #}
+        <a href="{{ path('productos_anadir_form') }}"><button>Añadir Producto</button></a>
+        <a href="{{ path('sel_actualizar_producto') }}"><button>Modificar Productos</button></a>
+        <a href="{{ path('form_eliminar_producto') }}"><button>Eliminar Productos</button></a>
+    {# {% endif %} #}
+    {% endif %}
+
+  {% set estaLogueado = app.request.cookies.has('correoSesion') %}
+
+  {% if estaLogueado == "true" %}
+    <a href="{{ path('cerrar_sesion') }}"><button>Cerrar Sesion</button></a>
+  {% else %}
+    <a href="{{ path('inicio_registro_form') }}"><button>Iniciar Sesion / Registrarse</button></a>
+  {% endif %}
+  <hr>
+
+  {% block datos %} {% endblock %}
+
+{# <hr>
+
+  {% block productos %} {% endblock %} #}
+
+</body>
+</html>

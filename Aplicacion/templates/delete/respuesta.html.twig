@@ -1,0 +1,10 @@
+{% extends 'home.html.twig' %}
+
+{% block datos %}
+  <div>
+    <p>Respuesta de servidor: {{mensaje}}</p>
+  </div>
+
+  <a href="{{ path('inicio') }}"><button>Volver a Inicio</button></a>
+
+{% endblock %}

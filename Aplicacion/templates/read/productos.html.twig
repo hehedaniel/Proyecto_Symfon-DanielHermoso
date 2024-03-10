@@ -1,0 +1,17 @@
+{% extends 'read/buscar.html.twig' %}
+
+{% block listaProducto %}
+
+  <h1>Se han buscados los siguientes productos</h1>
+  {% for producto in arrayProductos %}
+
+  <h3>Modelo: {{ producto.modelo }}</h3>
+  <h4>Precio: {{ producto.precio }} $</h4>
+  <p>Fabricante: {{ producto.fabricante }}</p>
+  <p>ID: {{ producto.id }}</p>
+  <p>Caracteristicas: {{ producto.caracteristicas }}</p>
+
+  <hr>
+
+  {% endfor %}
+{% endblock %}

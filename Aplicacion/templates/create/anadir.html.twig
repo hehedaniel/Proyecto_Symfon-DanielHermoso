@@ -1,0 +1,27 @@
+{% extends 'home.html.twig' %}
+
+{% block datos %}
+
+  <div>
+
+    <h1>Formulario para anadir un nuevo Producto</h1>
+
+    <form action="{{ path('anadirprod') }}" method="GET" >
+
+      <label for="modelo">Modelo:</label>
+      <input type="text" id="modelo" name="modelo" required><br>
+
+      <label for="fabricante">Fabricante:</label>
+      <input type="text" id="fabricante" name="fabricante" required><br>
+
+      <label for="precio">Precio:</label>
+      <input type="number" id="precio" name="precio" step="0.01" required><br>
+
+      <label for="caracteristicas">Características:</label>
+      <textarea id="caracteristicas" name="caracteristicas" rows="4" required></textarea><br>
+
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+
+{% endblock %}

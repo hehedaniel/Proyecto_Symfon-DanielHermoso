@@ -1,0 +1,21 @@
+{% extends 'home.html.twig' %}
+
+{% block datos %}
+
+  <div>
+
+  <h1>Formulario para eliminar un producto</h1>
+
+  <form action="{{ path('respuesta_eliminar') }}" method="GET" >
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" required>
+
+    <input type="submit" value="Submit">
+
+    <div>
+
+    </div>
+  </form>
+  </div>
+
+{% endblock %}

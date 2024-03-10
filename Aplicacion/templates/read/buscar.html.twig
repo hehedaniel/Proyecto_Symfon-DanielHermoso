@@ -1,0 +1,25 @@
+{% extends 'home.html.twig' %}
+
+{% block datos %}
+
+  <div>
+
+  <h1>Formulario para buscar un productos</h1>
+
+  <a href="{{ path('productos_mostrar') }}"><button>Mostrar todos los productos</button></a><br><br><br>
+
+  <form action="{{ path('producto_mostrar') }}" method="GET" >
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" required>
+
+    <input type="submit" value="Submit">
+
+
+    <div>
+      {% block listaProducto %}
+      {% endblock %}
+    </div>
+  </form>
+  </div>
+
+{% endblock %}
