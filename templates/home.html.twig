@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Menú CRUD</h1>
+
+    <a href="{{ path('productos_anadir') }}">Añadir Producto</a>
+    <a href="{{ path('productos_buscar') }}">Buscar Productos</a>
+    <a href="{{ path('actualizar_producto') }}">Modificar Productos</a>
+    <a href="{{ path('eliminar_producto') }}">Eliminar Productos</a>
+
+  <hr>
+
+  {% block datos %} {% endblock %}
+
+{# <hr>
+
+  {% block productos %} {% endblock %} #}
+
+</body>
+</html>
