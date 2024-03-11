@@ -50,13 +50,11 @@ Initial request for all components using the GET method:
 
 ![1710156567210](image/README/1710156567210.png)
 
-
 Request for a specific component using the GET method with an ID:
 
     IP / components / get / id}
 
 ![1710157192307](image/README/1710157192307.png)
-
 
 Request to add a component using the POST method with parameters
 
@@ -65,7 +63,6 @@ Request to add a component using the POST method with parameters
     Parameters: 'modelo', 'fabricante', 'caracteristicas' y 'precio'.
 
 ![1710157204882](image/README/1710157204882.png)
-
 
 Request to add a component using the PUT method with parameters:
 
@@ -77,19 +74,15 @@ Here, there are two options: send all attributes as parameters or only the one y
 
 ![1710157313446](image/README/1710157313446.png)
 
-
     IP / componentes / add
 
     Parameters:	only the modified one
 
 ![1710157320038](image/README/1710157320038.png)
 
-
 Request to delete a component using the DELETE method.
 
     IP / componentes / delete / id
-
-![1710157336370](https://file+.vscode-resource.vscode-cdn.net/d%3A/Estudia/Instituto/I.E.S%20Fernando%20Aguilar/1%C2%BA%20DAW/1-DAW/2DAW/DWES/Unidad4_Symfony/Proyecto_Symfony-DanielHermoso/image/README/1710157336370.png)
 
 
 Request to search for a nonexistent component
@@ -98,16 +91,13 @@ Request to search for a nonexistent component
 
 ![1710157358603](image/README/1710157358603.png)
 
-
 Request without action
 
     IP / componentes
 
 ![1710157377087](image/README/1710157377087.png)
 
-
 ## Possible requests for Users API
-
 
 Request to get all users
 
@@ -115,14 +105,11 @@ Request to get all users
 
 ![1710157392418](image/README/1710157392418.png)
 
-
 Request to search for a specific user using the GET method
 
     IP / user / get / id
 
 ![1710157398435](image/README/1710157398435.png)
-
-
 
 Request to register a user using the POST method with parameters:
 
@@ -131,8 +118,6 @@ Request to register a user using the POST method with parameters:
     Parameters: email y password
 
 ![1710157404478](image/README/1710157404478.png)
-
-
 
 Request to check the login of a user:
 
